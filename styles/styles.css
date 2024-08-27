@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+:root {
+  --color-principal: #FF725E;
+  --color-secundario: #e8dad8;
+  --color-fondo: #fbe6d3;
+  --font-montserrat: 'montserrat', sans-serif;
+}
+
+.header {
+  margin: 2% 4%;
+}
+
+.logo {
+  color: var(--color-principal);
+  font-family: var(--font-montserrat);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+body {
+  background-color: var(--color-fondo);
+}
+
+.cuerpo {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  justify-content: space-between;
+  margin: 2% 5%;
+  align-items: center;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80dvh;
+}
+
+.textarea {
+  border-color: transparent;
+  height: 50dvh;
+  outline: none;
+  background-color: transparent;
+  font-family: var(--font-montserrat);
+  font-size: 1.2rem;
+  color: var(--color-principal);
+}
+
+::placeholder {
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  color: var(--color-principal);
+}
+
+.condiciones {
+  font-family: var(--font-montserrat);
+  font-size: .6rem;
+  margin: 5% 0%;
+}
+
+.btn-encriptar {
+  color: #ffffff;
+  background-color: var(--color-principal);
+  font-family: var(--font-montserrat);
+  font-size: 1rem;
+  width: 250px;
+  height: 60px;
+  font-weight: 500;
+  border: none;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.btn-desencriptar {
+  color: var(--color-principal);
+  background-color: transparent;
+  font-family: var(--font-montserrat);
+  font-size: 1rem;
+  width: 250px;
+  height: 60px;
+  font-weight: 500;
+  border: 1;
+  border-radius: 1rem;
+  text-align: center;
+  border-color: var(--color-principal);
+}
+
+.btn-copiar {
+  color: var(--color-principal);
+  background-color: transparent;
+  font-family: var(--font-montserrat);
+  font-size: 1rem;
+  width: 100%;
+  height: 60px;
+  font-weight: 500;
+  border: 1;
+  border-radius: 1rem;
+  text-align: center;
+  border-color: var(--color-principal);
+}
+
+.hidden {
+  display: none;
+}
+
+.imagen {
+  display: block;
+  max-width: 100%;
+}
+
+.botones {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+}
+
+.subtitulo {
+  color: var(--color-principal);
+  font-family: var(--font-montserrat);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.mensaje {
+  font-family: var(--font-montserrat);
+  font-size: .8rem;
+  margin-bottom: 3rem;
+}
+
+.alerta {
+  display: flex;
+  gap: .5rem;
+  font-size: .7rem;
+  font-family: var(--font-montserrat);
+  margin: 2% 0%;
+}
+
+.resultado {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  height: 85dvh;
+  border-radius: 30px;
+  width: 40%;
+}
+
+
+
+@media screen and (max-width:768px) {
+  .cuerpo {
+    flex-direction: column;
+    height: 50dvh;
+    align-items: normal;
+  }
+
+  .textarea {
+    margin: 2rem 0rem;
+    width: 100%;
+    height: 30dvh;
+  }
+
+  .botones {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .resultado {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80dvh;
+    border-radius: 20px;
+    width: 100%;
+  }
+
+  .btn-encriptar {
+    color: #ffffff;
+    background-color: var(--color-principal);
+    font-family: var(--font-montserrat);
+    font-size: 1rem;
+    width: 100%;
+    height: 60px;
+    font-weight: 500;
+    border: none;
+    border-radius: 1rem;
+    text-align: center;
+  }
+
+  .btn-desencriptar {
+    color: var(--color-principal);
+    background-color: var(--color-secundario);
+    font-family: var(--font-montserrat);
+    font-size: 1rem;
+    width: 100%;
+    height: 60px;
+    font-weight: 500;
+    border: 1;
+    border-radius: 1rem;
+    text-align: center;
+    border-color: var(--color-principal);
+  }
+
+  .condiciones {
+    font-family: var(--font-montserrat);
+    font-size: .6rem;
+    margin: 1% 0%;
+  }
+
+  .imagen {
+    display: none;
+    max-width: 100%;
+  }
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  margin-bottom: 4rem;
+  --d:22px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  color: var(--color-principal);
+  box-shadow: 
+    calc(1*var(--d))      calc(0*var(--d))     0 0,
+    calc(0.707*var(--d))  calc(0.707*var(--d)) 0 1px,
+    calc(0*var(--d))      calc(1*var(--d))     0 2px,
+    calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 3px,
+    calc(-1*var(--d))     calc(0*var(--d))     0 4px,
+    calc(-0.707*var(--d)) calc(-0.707*var(--d))0 5px,
+    calc(0*var(--d))      calc(-1*var(--d))    0 6px;
+  animation: l27 1s infinite steps(8);
+}
+@keyframes l27 {
+  100% {transform: rotate(1turn)}
+}
